@@ -1,0 +1,395 @@
+/* .............  GENERAL  ............. */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Satisfy&display=swap");
+
+:root {
+  --white: #f5f5f5;
+  --halfWhite: rgba(245, 245, 245, 0.7);
+  --dark: #252525;
+  --halfDark: rgba(37, 37, 37, 0.8);
+  --salmon: #ff8a8a;
+  --red: hsl(0, 100%, 77%);
+  --blue: #4ca2d9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Playfair Display", serif;
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+p {
+  font-size: 1.3em;
+}
+
+/* .............  HEADER  ............. */
+
+header {
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 1em 0;
+  font-size: 1.8em;
+  background-color: var(--halfWhite);
+}
+
+header li {
+  position: relative;
+}
+
+header a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: var(--salmon);
+  position: absolute;
+  bottom: -0.2em;
+  left: 0;
+  transition: 0.2s ease-in;
+}
+
+header a.active {
+  color: var(--salmon);
+}
+
+header a:hover::after {
+  width: 100%;
+}
+
+header img {
+  display: none;
+}
+
+header nav {
+  text-align: center;
+}
+
+/* .............  DARK MODE  ............. */
+
+.dark-mode {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  text-align: center;
+  font-size: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1em;
+  background-color: var(--dark);
+}
+
+.body-night {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.header-night {
+  background-color: var(--halfDark);
+}
+
+.none {
+  display: none;
+}
+
+.fa-moon {
+  color: var(--white);
+}
+
+.fa-sun {
+  color: gold;
+}
+
+/* .............  DARK MODE  ............. */
+
+main {
+  padding: 10em 2em 0;
+  text-align: justify;
+}
+
+main h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 3.5em;
+  font-weight: normal;
+  text-align: center;
+  color: var(--salmon);
+}
+
+#main-pic {
+  max-width: 90%;
+  display: block;
+  margin: 6em auto;
+}
+
+/* .............  ARTICLES  ............. */
+
+.blogs {
+  max-width: 90%;
+  margin: 4em auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.blogs article {
+  margin: 0 auto 3em;
+  max-width: 90%;
+}
+
+article .article-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article-head button.delete {
+  padding: 0.6em 1em;
+  margin-left: 2em;
+  font-size: 0.9em;
+  border-radius: 0.3em;
+  border: none;
+  background-color: var(--red);
+  color: var(--white);
+  cursor: pointer;
+}
+
+button.delete:active {
+  transform: scale(0.8);
+}
+
+article h2 {
+  text-align: center;
+  font-size: 2.2em;
+  letter-spacing: 2.5px;
+}
+
+article img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+article h3 {
+  text-align: right;
+}
+
+article p {
+  text-align: justify;
+  word-wrap: break-word;
+}
+
+/* .............  ARTICLE AFTER FORM  ............. */
+
+.newArticle {
+  width: 70%;
+  margin: 5em auto;
+}
+
+.newArticle img {
+  max-width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* .............  FORM  ............. */
+
+form {
+  min-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+}
+
+form label {
+  margin-bottom: 0.3em;
+}
+
+form input {
+  margin-bottom: 1.6em;
+  padding: 0.6em 0.4em;
+  font-size: 0.8em;
+  font-family: "Playfair Display", serif;
+}
+
+textarea {
+  resize: vertical;
+  font-size: 1em;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1.6em;
+  min-height: 8em;
+}
+
+button[type="submit"] {
+  padding: 0.6em 1em;
+  font-size: 1.1em;
+  border-radius: 0.3em;
+  border: none;
+  background-color: var(--salmon);
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+/* .............  ABOUT .............. */
+
+h1 + .about {
+  margin-top: 6em;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5em auto;
+}
+
+.about p {
+  padding: 1.5em;
+  max-height: 28em;
+  overflow: hidden;
+}
+
+.about img {
+  width: 100%;
+  height: clamp(22em, 50vh, 41em);
+}
+
+/* .............  FOOTER  ............. */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  padding: 1em 0 2em;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2em 0;
+}
+
+footer i {
+  font-size: 1.2em;
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+
+.network i {
+  font-size: 2.2em;
+}
+
+footer i:hover {
+  color: var(--salmon);
+}
+
+footer i:active {
+  transform: scale(0.8);
+}
+
+footer p {
+  text-align: center;
+}
+
+#to-top {
+  font-size: 1.7em;
+}
+
+#to-top:hover {
+  color: var(--salmon);
+}
+
+/* .............    MEDIA QUERIES : MEDIUM AND MORE  ............. */
+
+@media screen and (min-width: 50em) {
+  header {
+    display: grid;
+    grid-template-columns: 0.5fr 6fr 1fr;
+  }
+
+  nav #burger {
+    opacity: 0;
+  }
+
+  header img {
+    display: block;
+    width: 4em;
+    padding-left: 1em;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .dark-mode {
+    position: unset;
+    justify-self: end;
+    margin-right: 1em;
+  }
+
+  .blogs article {
+    margin: unset;
+    max-width: 65%;
+  }
+
+  .blogs article:nth-of-type(2n + 1) {
+    margin-right: auto;
+  }
+
+  .blogs article:nth-of-type(2n) {
+    margin-left: auto;
+  }
+
+  form {
+    width: 40%;
+  }
+
+  .about {
+    flex-direction: row;
+    width: 90%;
+  }
+
+  .about img {
+    width: clamp(20em, 15vw, 40em);
+    height: clamp(22em, 50vh, 41em);
+  }
+
+  div.about:nth-of-type(2) {
+    margin-bottom: 6em;
+  }
+
+  footer {
+    margin: 1em 0;
+    padding-bottom: 0;
+  }
+
+  .network i {
+    margin: 0 2.5em;
+  }
+}

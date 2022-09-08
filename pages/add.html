@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writers - Add</title>
+    <link rel="shortcut icon" href="../img/pen-logo-white.png" type="png">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <img src="../img/pen-logo-dark.png" alt="">
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#">Add</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="dark-mode">
+            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-sun none"></i>
+        </div>
+
+    </header>
+
+    <main id="top-page">
+
+        <h1>Add your article</h1>
+
+        <form action="">
+            <label for="title">Title</label>
+            <input type="text" id="title" autocomplete="off">
+            <label>Author</label>
+            <input type="text" id="author" autocomplete="off">
+            <label>Image URL</label>
+            <input type="text" id="image" autocomplete="off">
+            <label for="article">Article</label>
+            <textarea id="article" cols="30" rows="4" autocomplete="off"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="newArticle"></div>
+
+    </main>
+
+
+    <footer>
+
+        <div>
+
+            <p>
+                vous pouvez nous envoyer un mail
+                <a href="mailto:p.lanougadere@gmail.com"><i class="fa-solid fa-paper-plane"></i></a>
+            </p>
+
+            <a href="#top-page"><i class="far fa-arrow-alt-circle-up" id="to-top"></i></a>
+
+        </div>
+
+        <div>
+
+            <div class="network">
+                <a href="https://fr-fr.facebook.com/"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/?hl=fr"><i class="fa-brands fa-instagram-square"></i></a>
+                <a href="https://twitter.com/home"><i class="fa-brands fa-twitter-square"></i></a>
+            </div>
+
+            <p> Doranco © Copyright <span id="date"></span></p>
+        </div>
+
+    </footer>
+
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
